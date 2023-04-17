@@ -1,23 +1,23 @@
 package BinaryTree;
 
 /**
- * Node.java
+ * NodeBBT.java
  * Class for creating nodes inside of the binary tree.
  * @author Gael Emiliano Casillas Avina (casillas.avina.gael.emiliano@gmail.com)
- * @since 04/16/2023
+ * @since 04/17/2023
  */
-public class Node {
+public class NodeBBT {
     
     private int value;
-    private Node leftNode;
-    private Node rightNode;
+    private NodeBBT leftNode;
+    private NodeBBT rightNode;
     private int contador;
     
     /**
      * Constructor of a node.
      * @param value Value of a node.
      */
-    public Node(int value){
+    public NodeBBT(int value){
         this.value = value;
         this.contador = 1;
         this.leftNode = null;
@@ -44,7 +44,7 @@ public class Node {
      * Obtains the left node.
      * @return Returns left node.
      */
-    public Node getLeftNode() {
+    public NodeBBT getLeftNode() {
         return leftNode;
     }
 
@@ -52,7 +52,7 @@ public class Node {
      * Obtains the right node.
      * @return Returns right node.
      */
-    public Node getRightNode() {
+    public NodeBBT getRightNode() {
         return rightNode;
     }
     
@@ -67,13 +67,13 @@ public class Node {
         }
         if(value < this.value){
             if(this.leftNode == null){
-                this.leftNode = new Node(value);
+                this.leftNode = new NodeBBT(value);
             }else{
                 this.leftNode.insertNode(value);
             }
         }else{
             if(this.rightNode == null){
-                this.rightNode = new Node(value);
+                this.rightNode = new NodeBBT(value);
             }else{
                 this.rightNode.insertNode(value);
             }

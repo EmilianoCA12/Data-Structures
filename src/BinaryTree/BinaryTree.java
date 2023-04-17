@@ -4,11 +4,11 @@ package BinaryTree;
  * BinaryTree.java
  * Class for creating nodes inside of the binary tree.
  * @author Gael Emiliano Casillas Avina (casillas.avina.gael.emiliano@gmail.com)
- * @since 04/16/2023
+ * @since 04/17/2023
  */
 public class BinaryTree {
     
-    private Node initial;
+    private NodeBBT initial;
     
     /**
      * Constructor for the binary tree.
@@ -23,7 +23,7 @@ public class BinaryTree {
      */
     public void insertNode(int value){
         if(this.initial == null){
-            this.initial = new Node(value);
+            this.initial = new NodeBBT(value);
         }else{
             this.initial.insertNode(value);
         }
@@ -36,7 +36,7 @@ public class BinaryTree {
         this.prefix(this.initial);
     }
     
-    private void prefix(Node begin){
+    private void prefix(NodeBBT begin){
         if(begin == null){
             return;
         }else{
@@ -51,7 +51,7 @@ public class BinaryTree {
      * @param value Value of search node.
      * @return Returns found node.
      */
-    public Node executeSearch(int value){
+    public NodeBBT executeSearch(int value){
         return this.searchNode(value, this.initial);
     }
     
@@ -61,7 +61,7 @@ public class BinaryTree {
      * @param search Node for the recursion.
      * @return Returns if it found the node.
      */
-    public Node searchNode(int value, Node search){
+    public NodeBBT searchNode(int value, NodeBBT search){
         if(search == null) return null;
         if(search.getValue() == value){
             return search;
@@ -85,7 +85,7 @@ public class BinaryTree {
      * @param search Node for the recursion.
      * @return Returns the minimum number.
      */
-    public int searchMin(Node search){
+    public int searchMin(NodeBBT search){
         if(search.getLeftNode() == null){
             return search.getValue();
         }else{
@@ -106,7 +106,7 @@ public class BinaryTree {
      * @param search Node for the recursion.
      * @return Returns the maximum number.
      */
-    public int searchMax(Node search){
+    public int searchMax(NodeBBT search){
         if(search.getRightNode() == null){
             return search.getValue();
         }else{

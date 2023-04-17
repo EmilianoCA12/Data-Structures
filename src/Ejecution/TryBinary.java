@@ -7,14 +7,14 @@ import java.util.Random;
  * BinaryTree.java
  * Class for creating nodes inside of the binary tree.
  * @author Gael Emiliano Casillas Avina (casillas.avina.gael.emiliano@gmail.com)
- * @since 04/16/2023
+ * @since 04/17/2023
  */
 public class TryBinary {
     public static void main(String args[]){
         
         BinaryTree tree = new BinaryTree();
         Random rand = new Random();
-        Node auxN;
+        NodeBBT auxN;
         
         for(int i = 0; i < 1000000; ++i){
             int aux = rand.nextInt(1, 2000001);
