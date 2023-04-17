@@ -11,6 +11,7 @@ public class Node {
     private int value;
     private Node leftNode;
     private Node rightNode;
+    private int contador;
     
     /**
      * Constructor of a node.
@@ -18,6 +19,7 @@ public class Node {
      */
     public Node(int value){
         this.value = value;
+        this.contador = 1;
         this.leftNode = null;
         this.rightNode = null;
     }
@@ -59,6 +61,10 @@ public class Node {
      * @param value The new value to add
      */
     public void insertNode(int value){
+        if(value == this.value){
+            this.contador++;
+            return;
+        }
         if(value < this.value){
             if(this.leftNode == null){
                 this.leftNode = new Node(value);
@@ -71,6 +77,6 @@ public class Node {
             }else{
                 this.rightNode.insertNode(value);
             }
-        }
+        }   
     }
 }
