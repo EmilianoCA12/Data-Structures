@@ -6,18 +6,18 @@ package BinaryTree;
  * @author Gael Emiliano Casillas Avina (casillas.avina.gael.emiliano@gmail.com)
  * @since 04/17/2023
  */
-public class NodeBBT {
+public class NodeBT {
     
     private int value;
-    private NodeBBT leftNode;
-    private NodeBBT rightNode;
+    private NodeBT leftNode;
+    private NodeBT rightNode;
     private int contador;
     
     /**
      * Constructor of a node.
      * @param value Value of a node.
      */
-    public NodeBBT(int value){
+    public NodeBT(int value){
         this.value = value;
         this.contador = 1;
         this.leftNode = null;
@@ -44,7 +44,7 @@ public class NodeBBT {
      * Obtains the left node.
      * @return Returns left node.
      */
-    public NodeBBT getLeftNode() {
+    public NodeBT getLeftNode() {
         return leftNode;
     }
 
@@ -52,7 +52,7 @@ public class NodeBBT {
      * Obtains the right node.
      * @return Returns right node.
      */
-    public NodeBBT getRightNode() {
+    public NodeBT getRightNode() {
         return rightNode;
     }
     
@@ -67,13 +67,13 @@ public class NodeBBT {
         }
         if(value < this.value){
             if(this.leftNode == null){
-                this.leftNode = new NodeBBT(value);
+                this.leftNode = new NodeBT(value);
             }else{
                 this.leftNode.insertNode(value);
             }
         }else{
             if(this.rightNode == null){
-                this.rightNode = new NodeBBT(value);
+                this.rightNode = new NodeBT(value);
             }else{
                 this.rightNode.insertNode(value);
             }

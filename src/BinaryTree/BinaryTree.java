@@ -8,7 +8,7 @@ package BinaryTree;
  */
 public class BinaryTree {
     
-    private NodeBBT initial;
+    private NodeBT initial;
     
     /**
      * Constructor for the binary tree.
@@ -23,7 +23,7 @@ public class BinaryTree {
      */
     public void insertNode(int value){
         if(this.initial == null){
-            this.initial = new NodeBBT(value);
+            this.initial = new NodeBT(value);
         }else{
             this.initial.insertNode(value);
         }
@@ -36,7 +36,7 @@ public class BinaryTree {
         this.prefix(this.initial);
     }
     
-    private void prefix(NodeBBT begin){
+    private void prefix(NodeBT begin){
         if(begin == null){
             return;
         }else{
@@ -51,7 +51,7 @@ public class BinaryTree {
      * @param value Value of search node.
      * @return Returns found node.
      */
-    public NodeBBT executeSearch(int value){
+    public NodeBT executeSearch(int value){
         return this.searchNode(value, this.initial);
     }
     
@@ -61,7 +61,7 @@ public class BinaryTree {
      * @param search Node for the recursion.
      * @return Returns if it found the node.
      */
-    public NodeBBT searchNode(int value, NodeBBT search){
+    public NodeBT searchNode(int value, NodeBT search){
         if(search == null) return null;
         if(search.getValue() == value){
             return search;
@@ -85,7 +85,7 @@ public class BinaryTree {
      * @param search Node for the recursion.
      * @return Returns the minimum number.
      */
-    public int searchMin(NodeBBT search){
+    public int searchMin(NodeBT search){
         if(search.getLeftNode() == null){
             return search.getValue();
         }else{
@@ -106,7 +106,7 @@ public class BinaryTree {
      * @param search Node for the recursion.
      * @return Returns the maximum number.
      */
-    public int searchMax(NodeBBT search){
+    public int searchMax(NodeBT search){
         if(search.getRightNode() == null){
             return search.getValue();
         }else{
