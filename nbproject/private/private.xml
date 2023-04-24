@@ -4,8 +4,9 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/D:/Data-Structures/src/BinaryTree/BinaryTree.java</file>
+            <file>file:/D:/Data-Structures/src/BalancedBinaryTree/NodeBBT.java</file>
+            <file>file:/D:/Data-Structures/src/BinaryTree/NodeBT.java</file>
             <file>file:/D:/Data-Structures/src/Ejecution/TryBinary.java</file>
-            <file>file:/D:/Data-Structures/src/BinaryTree/Node.java</file>
         </group>
     </open-files>
 </project-private>

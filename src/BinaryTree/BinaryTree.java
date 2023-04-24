@@ -36,6 +36,10 @@ public class BinaryTree {
         this.prefix(this.initial);
     }
     
+    /**
+     * Function for printing the tree in prefix way using recursion.
+     * @param begin Node for recursion.
+     */
     private void prefix(NodeBT begin){
         if(begin == null){
             return;

@@ -9,17 +9,17 @@ package BinaryTree;
 public class NodeBT {
     
     private int value;
+    private int counter;
     private NodeBT leftNode;
     private NodeBT rightNode;
-    private int contador;
     
     /**
-     * Constructor of a node.
+     * Constructor of a node for BinaryTree.
      * @param value Value of a node.
      */
     public NodeBT(int value){
         this.value = value;
-        this.contador = 1;
+        this.counter = 1;
         this.leftNode = null;
         this.rightNode = null;
     }
@@ -62,7 +62,7 @@ public class NodeBT {
      */
     public void insertNode(int value){
         if(value == this.value){
-            this.contador++;
+            this.counter++;
             return;
         }
         if(value < this.value){

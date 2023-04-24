@@ -10,6 +10,10 @@ import java.util.Random;
  * @since 04/17/2023
  */
 public class TryBinary {
+    /**
+     * Function for executing main class.
+     * @param args Arguments for running main.
+     */
     public static void main(String args[]){
         
         BinaryTree tree = new BinaryTree();
